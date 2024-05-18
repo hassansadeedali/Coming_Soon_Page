@@ -1,0 +1,103 @@
+/* styles/ComingSoon.module.css */
+
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 40px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background: linear-gradient(270deg, #ff7e5f, #feb47b, #86a8e7, #91eae4);
+    background-size: 800% 800%;
+    animation: gradientBackground 20s ease infinite;
+    color: #fff;
+}
+
+.title {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1.5s ease forwards;
+}
+
+.description {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1.5s ease forwards 0.5s;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1.5s ease forwards 1s;
+}
+
+.input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    width: 250px;
+}
+
+.button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.socials {
+    display: flex;
+    gap: 1rem;
+    animation: fadeInUp 1.5s ease forwards 1.5s;
+}
+
+.socialLink {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.socialLink:hover {
+    color: #ffd700;
+}
